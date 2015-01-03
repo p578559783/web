@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $new_goods} -->
+<div class="pro_box">
+<p class="tit"><img src="../images/main_index_newarrival.gif"></p>
+<p><a href="../search.php?intro=best"><img src="../images/main_index_menu_korean_women.gif"></a></p>
+<div class="blank"></div>
+<div class="blank"></div>
+  <!--{foreach from=$new_goods item=goods}-->
+  <div class="goodsItem">
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+            <p><img src="../images/watermark_new_small.gif"></p>
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           <p>售价:{$goods.market_price}</p> 
+           <p class="f1">现价:<!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></p>
+        </div>
+  <!--{/foreach}-->
+
+</div>
+<div class="blank"></div>
+<!-- {/if} -->

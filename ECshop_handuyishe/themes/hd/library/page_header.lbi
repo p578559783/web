@@ -1,0 +1,152 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<!--[if IE 6]>
+<div id="yellowtip" style="width: 100%; background-color: rgb(254, 246, 227); border-top-width: 1px; border-bottom-width: 1px; border-style: solid none; border-top-color: rgb(229, 205, 150); border-bottom-color: rgb(229, 205, 150); height: 33px; min-width: 920px; z-index: 99999; background-position: initial initial; background-repeat: initial initial;">
+    <div style="margin:0 auto;width:900px;line-height:33px;text-align:center;color:#82654D;">温馨提示：尊敬的用户，现在检测到您正在使用IE6浏览器。为了确保您的购物安全和更好的用户体验，请<a class="se6_download" style="color:#1C79A1" href="http://chrome.360.cn/" target="_blank">下载360极速浏览器</a>或者升级更高版本的IE浏览器</div>
+    <div id="yellowtipclose" style="display:none;"></div>
+  </div>
+<![endif]-->
+<div class='toolbar'>
+    <div class="w">
+        <ul class="fl lh">
+            <li>
+                <a href="../index.php"  style='color:#c80a28' target="_blank">返回首页</a>
+            </li>
+            <li>
+                <a href="javascript:window.external.addFavorite()" id='AddFavorite'rel="nofollow">收藏本站</a>
+            </li>
+      <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+      <li><a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a></li>
+    <!-- {/foreach} -->
+            <li>
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=77898852&amp;site=qq&amp;menu=yes" target="_blank">在线客服</a>
+            </li>
+            <li><a href="user.php" target="_blank" >会员俱乐部</a></li>
+        </ul>
+        
+        <ul class="fr">
+            <li class="fore ld" id="phone_icon">
+                <a href="mobile/" target="_blank">
+                    <img src="images/phone.png" alt="手机客户端" class="fl" style="margin-right: 4px;">
+                    <span>手机版</span>
+                </a>
+            </li>
+            <li class="fore ld" id='wireless_icon' style='padding:0;margin-right:-8px;'>
+                <span> 关注我们</span>
+                <img src='images/weixin.png' alt='官方微信' id='weixin' class='fl' style='margin:7px;margin-right:9px;'>
+            </li>
+        </ul>
+        {insert_scripts files='utils.js'}
+        <ul class="fr" id="ECS_MEMBERZONE">
+   <font>{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+        </ul>
+        <span class="clr"></span>
+    </div>
+</div>
+
+<div id="header">
+    <div class="head clearfix">
+        <div class="hd">
+            <a title="韩都衣舍 没空去韩国？就来韩都衣舍！" href="../index.php" id='logo'>
+                韩都衣舍 没空去韩国？就来韩都衣舍！
+            </a>
+        </div>
+        
+        <div class='tab_search' >
+			<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+                <input  onkeydown="if (event.keycode==13) {formsubmit()}"   id='searchinput' class='searchinput'  onfocus="if (this.value =='针织衫'){this.value=''}"   title='search' size='10'   value="针织衫"  name="keywords" >
+                <input class='searchaction'   onclick="javascript:formsubmit()"  name="searchbtn"  border=0 hspace=2 alt=search src="images/search_btn1.png"  type='image'>
+            </form>    
+        </div>
+        <div class='keyW'>
+            <em>热门搜索:</em>
+     {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+        </div>
+        <span id="ECS_CARTINFO">{insert name='cart_info'}</span>
+        <div class='brandlist' >
+              <a href="#" id='a1' target="_blank"></a>
+              <a href="#" id='a2' target="_blank"></a>
+              <a href="#" id='a3' target="_blank"></a>
+              <a href="#" id='a4' target="_blank"></a>
+              <a href="#" id='a5' target="_blank"></a>
+              <a href="#" id='a6' target="_blank"></a>
+              <a href="#" id='a7' target="_blank"><img src="images/jp.gif" style="position: absolute;right: 4px;top: 13px;"></a>
+        </div>
+    </div>
+    <div class="navbg" id="navbg">
+        <div class="navbg_r"></div>
+        <div class="nav_w clearfix">
+            <ul class="bd">
+                <li class="rbg">
+                    <a class="goodnews fl" href="./" target="_blank">首页</a>
+                </li>
+                <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} --> 
+                <li class="discovery">
+                    <a class="showdiscovery fl" href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}  target="_blank">
+                        <i class='arrow1'></i>{$nav.name}
+                    </a>
+             <?php $this->assign('catchild', get_child_tree($GLOBALS['smarty']->_var['nav']['cid']));?>  
+         <!--{if $nav.cid}-->  
+                    <div class="sub_layer"{if $smarty.foreach.nav_middle_list.first} id='w980'{/if} class='clearfix'>
+                        <div id="hot_cate">                            
+                      <!--{foreach from=$catchild item=child}-->
+                          <ul class='menu_category'><h2><a href="{$child.url}" title="{$child.name|escape:html}" target="_blank">{$child.name|escape:html}</a></h2>
+                            <!--{foreach from=$child.cat_id item=childer name=childnum}-->
+                          <li><a href='{$childer.url}' title="{$childer.name|escape:html}" target="_blank">{$childer.name|escape:html}</a></li>
+                          <!--{/foreach}--> 
+                          </ul>	        
+                         <!--{/foreach}--> 
+       
+                        <h1>热门活动</h1>
+                        <ul class='newsList'>
+                           <li><a href="#" target="_blank">热卖TOP榜单</a></li><li><a href="#" target="_blank">秒杀专区</a></li><li><a href="#" target="_blank">韩都衣舍秋装新品上新</a></li>                        </ul>
+                        <h1>抢购活动</h1>
+                        <h1><a href="{$nav.url}" title="{$nav.name}首页" target="_blank" class="entry">进入{$nav.name}首页&gt;&gt;</a></h1>
+                        </div>
+                  </div>
+                   <!--{/if}-->
+                </li>
+              <!-- {/foreach} -->
+ 
+            </ul>
+        </div>
+    </div>
+</div>
+<?php 
+   require_once("themes/".$GLOBALS['_CFG']['template']."/diyfile.php");
+   $this->assign('TemplatePath','themes/'.$GLOBALS['_CFG']['template']);
+?>
+<script type="text/javascript" src="{$TemplatePath}/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$TemplatePath}/js/jquery-migrate-1.1.0.js"></script>
+<script type="text/javascript" src='{$TemplatePath}/js/jquery.hoverdelay.js'></script>
+ 
+<script type="text/javascript">
+$('.discovery').hover(function(){
+        $(this).find('.sub_layer').show();
+},function(){
+        $(this).find('.sub_layer').hide();
+})
+var codeL = $('.w').offset().left+20;
+$('#weixin').hover(function(){
+        $('#code').css({'right':codeL}).show();
+},function(){
+        $('#code').hide();
+})
+$("#AddFavorite").on("click", function () { 
+  var sURL = "http://www.yunmoban.cn/"; 
+  sTitle = "云模板"; 
+  try {window.external.addFavorite(sURL, sTitle);} 
+  catch (e) { 
+    try {window.sidebar.addPanel(sTitle, sURL, "slice");} 
+    catch (e) {alert("您可以尝试通过快捷键 Ctrl + D 加入到收藏夹~")} 
+  } 
+}); 
+function formsubmit()
+{
+	document.searchForm.submit()
+}
+</script>

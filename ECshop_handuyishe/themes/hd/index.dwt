@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="handu_base.css" rel="stylesheet" type="text/css" />
+<link href="handu_style.css" rel="stylesheet" type="text/css" />
+<link href="handu_nivoslider.css" rel="stylesheet" type="text/css" />
+<link href="handu_flex.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.focus.js"></script>
+<style type="text/css">
+.seven{
+	width: 100%;
+	height:450px;
+	background: url(images/taishanyading.jpg) no-repeat top center;
+}
+</style>
+</head>
+<body>
+<a href='#' target='_blank'><div class='seven'></div></a>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div style='width:100%;overflow:hidden'>
+	<div class='banner'>
+	
+	
+<div id="banner">
+    <div id="nivo-wrapper">
+        <div class="nivoSlider" >
+    <?php $this->assign('playerdb', get_flash_xml());?>
+      {foreach from=$playerdb item=item key=key name=fnum}<a href="{$item.url}" target="_blank"><img src="{$item.src}" alt="{$item.text}" title="{$item.text}" /></a>{/foreach}
+       </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/ss.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.nivoSlider').nivoSlider({
+            effect:'fade'
+        });
+    });
+</script>
+	
+	</div>
+</div>
+<div class='wrap' class='hide'>
+     
+     <div class='brand_collect'>
+	             <div class="fl abrand">{insert name='ads' id=1 num=1}</div>
+                 <div class="fl abrand">{insert name='ads' id=2 num=1}</div>
+                 <div class="fl abrand">{insert name='ads' id=3 num=1}</div>
+                 <div class="fl abrand">{insert name='ads' id=4 num=1}</div>
+                 <div class="fl abrand">{insert name='ads' id=5 num=1}</div>
+                 <div class="fl">{insert name='ads' id=6 num=1}</div>
+	    	 </div>
+     
+  
+    
+	<div class='floor' id='floor1'>
+		  <div class='nav_bar'>
+		  	    <a href="#" title="棉服" target="_blank"></a>
+		  	    <a href="#" title="毛衣针织衫" target="_blank"></a>
+		  	    <a href="#" title="外套" target="_blank"></a>
+		  	    <a href="#" title="裙装" target="_blank"></a>
+		  	    <a href="#" title="裤装" target="_blank"></a>
+		  	    <a href="#" title="鞋子" target="_blank"></a>
+		  </div>
+		  <div class='R fl'>
+			  <h1>
+			  	   <div class='keyWord fr'>
+                   <!-- #BeginLibraryItem "/library/icat1.lbi" --><!-- #EndLibraryItem -->
+			  	   </div>
+			  </h1>
+			  <div class='sad1 fl'>
+			  	    <div class="longbox fl">
+					    <ul class="longbox_content" > 
+                          <li>{insert name='ads' id=7 num=1}</li>
+					      <li>{insert name='ads' id=8 num=1}</li>
+					      <li>{insert name='ads' id=9 num=1}</li>
+					    </ul>
+					</div>
+			  </div>
+			  
+                  <div class='sad2 fr'>
+                    	{insert name='ads' id=10 num=1}
+             	 	</div>
+                    <div class='sad2 fr'>
+                    	{insert name='ads' id=11 num=1}
+             	 	</div>
+
+		  </div>
+		  <ul>
+        <!-- TemplateBeginEditable name="首页_第一分类产品" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {else}           
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->     
+              			 
+		  </ul>
+	</div>
+	
+	 
+	<div class='floor' id='floor2'>
+		 <div class='nav_bar'>
+		  	    <a href="#" title="外套" target="_blank"></a>
+		  	    <a href="#" title="针织衫/毛衣" target="_blank"></a>
+		  	    <a href="#" title="长袖T恤" target="_blank"></a>
+		  	    <a href="#" title="裙装" target="_blank"></a>
+		  	    <a href="#" title="雪纺衫" target="_blank"></a>
+		  	    <a href="#" title="休闲裤" target="_blank"></a>
+		  </div>
+		  <div class='R fl'>
+			  <h1>
+			  	   <div class='keyWord fr'>
+			  	   	    <!-- #BeginLibraryItem "/library/icat2.lbi" --><!-- #EndLibraryItem -->
+			  	   </div>
+			  </h1>
+			  <div class='sad1 fl'>
+              
+                		 <div class="flex-container" id="sulv_banner">
+				       <div class="flexslider" id="flexslider2">
+				             <ul class="slides">
+				              
+				         <li>{insert name='ads' id=12 num=1}</li>
+					      <li>{insert name='ads' id=13 num=1}</li>
+			 					                                 
+				            </ul>
+				      </div>
+					</div>
+                
+                
+                </div>
+			  
+               			   <div class='sad2 fr'>
+{insert name='ads' id=15 num=1}
+               </div>
+                			   <div class='sad2 fr'>
+              {insert name='ads' id=16 num=1}
+               </div>
+                		  </div>
+		  <ul>
+          
+          				        <!-- TemplateBeginEditable name="首页_第二分类产品" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {else}           
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->     
+		  </ul>
+	</div>
+
+    
+	<div class='floor' id='floor3'>
+		 <div class='nav_bar'>
+		  	    <a href="#" title="毛衣" target="_blank"></a>
+		  	    <a href="#" title="外套" target="_blank"></a>
+		  	    <a href="#" title="棉衣" target="_blank"></a>
+		  	    <a href="#" title="长袖T恤" target="_blank"></a>
+		  	    <a href="#" title="牛仔裤" target="_blank"></a>
+		  	    <a href="#" title="男鞋" target="_blank"></a>
+		  </div>
+		  <div class='R fl'>
+			  <h1>
+			  	   <div class='keyWord fr'>
+			  		<!-- #BeginLibraryItem "/library/icat3.lbi" --><!-- #EndLibraryItem -->
+			  	   </div>
+			  </h1>
+			  <div class='sad1 fl'>
+			  	
+				<div class="focus fl" id='amh_banner'>
+				          <ul>
+				            <li>{insert name='ads' id=17 num=1}</li>
+					        <li>{insert name='ads' id=18 num=1}</li>
+					        <li>{insert name='ads' id=19 num=1}</li> 
+					     </ul>
+				</div>
+				
+			  </div>
+			 
+             	    <div class='sad3 fr'>{insert name='ads' id=20 num=1}</div>
+                    <div class='sad3 fr'>{insert name='ads' id=21 num=1}</div>
+                    <div class='sad3 fr'>{insert name='ads' id=37 num=1}</div>
+
+		  </div>
+
+		  <ul>
+		 <!-- TemplateBeginEditable name="首页_第三分类产品" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {else}           
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->     
+		  </ul>
+   
+	</div>
+	
+	
+    
+	<div class='floor' id='floor4'>
+		 <div class='nav_bar'>
+		  	    <a href="#" title="毛衣" target="_blank"></a>
+		  	    <a href="#" title="外套" target="_blank"></a>
+		  	    <a href="#" title="棉衣" target="_blank"></a>
+		  	    <a href="#" title="套装" target="_blank"></a>
+		  	    <a href="#" title="裤装" target="_blank"></a>
+		  	    <a href="#" title="配饰" target="_blank"></a>
+		  </div>
+		
+		 
+		  <div class='R fl'>
+			  <h1>
+			  	   <div class='keyWord fr'>
+			  	   	<!-- #BeginLibraryItem "/library/icat4.lbi" --><!-- #EndLibraryItem -->
+			  	   </div>
+			  </h1>
+              
+                
+           
+			  <div class='sad1 fl'> {insert name='ads' id=22 num=1} </div>
+            
+              				  <div class='sad2 fr'> {insert name='ads' id=25 num=1} </div>
+			  				  <div class='sad2 fr'> {insert name='ads' id=26 num=1} </div>
+			  		  </div>
+		  <ul>
+      <!-- TemplateBeginEditable name="首页_第四分类产品" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {else}           
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->    
+             
+		  
+		  </ul>
+	</div>
+	<div class='tonglan'>{insert name='ads' id=48 num=1}</div>
+
+	<div class='floor' id='floor5'>
+		 <div class='nav_bar'>
+		  	    <a href="#" title="外套" target="_blank"></a>
+		  	    <a href="#" title="针织衫/毛衣" target="_blank"></a>
+		  	    <a href="#" title="西装" target="_blank"></a>
+		  	    <a href="#" title="裙装" target="_blank"></a>
+		  	    <a href="#" title="长袖T恤" target="_blank"></a>
+		  	    <a href="#" title="长裤" target="_blank"></a>
+		  </div>
+		 
+		  <div class='R fl'>
+			  <h1>
+			  	   <div class='keyWord fr'>
+			  	   	     <!-- #BeginLibraryItem "/library/icat5.lbi" --><!-- #EndLibraryItem -->
+			  	   </div>
+			  </h1>
+              
+              
+			  <div class='sad1 fl'> {insert name='ads' id=27 num=1} </div>
+			  
+                				  <div class='sad2 fr'> {insert name='ads' id=30 num=1} </div>
+			  				  <div class='sad2 fr'> {insert name='ads' id=31 num=1} </div>
+			                
+		  </div>
+		  <ul>
+          
+ <!-- TemplateBeginEditable name="首页_第五分类产品" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {else}           
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->    
+		  </ul>
+		  
+	</div>
+	
+
+	<div class='floor' id='floor6'>
+		 <div class='nav_bar'>
+		  	    <a href="#" title="外套" target="_blank"></a>
+		  	    <a href="#" title="毛衣&针织" target="_blank"></a>
+		  	    <a href="#" title="长袖T恤" target="_blank"></a>
+		  	    <a href="#" title="裙装" target="_blank"></a>
+		  	    <a href="#" title="长裤" target="_blank"></a>
+		  	    <a href="#" title="配饰" target="_blank"></a>
+		  </div>
+ 
+		  <div class='R fl'>
+			  <h1>
+			  	   <div class='keyWord fr'>
+			  	   	   <!-- #BeginLibraryItem "/library/icat6.lbi" --><!-- #EndLibraryItem -->
+			  	   </div>
+			  </h1>
+			  <div class='sad1 fl'>
+                
+			  	<div class="flex-container" id="sulv_banner">
+				       <div class="flexslider" id="flexslider2">
+				             <ul class="slides">
+				              <li> {insert name='ads' id=32 num=1} </li>
+			 					                                 
+				            </ul>
+				      </div>
+				</div>
+				
+			  </div>
+			 
+                           <div class='sad3 fr'>{insert name='ads' id=35 num=1}</div>
+                           <div class='sad3 fr'>{insert name='ads' id=36 num=1}</div>
+                           <div class='sad3 fr'>{insert name='ads' id=38 num=1}</div>
+             			 
+		  </div>
+		  <ul>
+	<!-- TemplateBeginEditable name="首页_第六分类产品" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {else}           
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->    
+		     
+		  </ul>
+	</div>
+   
+    
+    <div class='sale_floor fl'>
+		<div class='news_section'>
+			  <h1>新闻中心</h1>
+              <div class='news_box news_box1 fl'>{insert name='ads' id=39 num=1}</div> 
+              
+              <div class='news_box news_box2 fl'>{insert name='ads' id=40 num=1}</div> 
+                <div class='news_box news_box3 fl'>
+              {insert name='ads' id=41 num=1}
+              </div> 
+               <div class='news_box news_box3 fl'>
+              	{insert name='ads' id=42 num=1}
+              </div> 
+              		</div>
+		<div class='coupon_section'>
+			   <h1>精彩活动</h1>
+                            <div class='coupon_box coupon_box1 fl'>
+                  	{insert name='ads' id=43 num=1}
+              </div> 
+                            <div class='coupon_box coupon_box1 fl'>
+                  	{insert name='ads' id=44 num=1}
+              </div> 
+                            <div class='coupon_box coupon_box1 fl'>
+                  	{insert name='ads' id=45 num=1}
+              </div> 
+                           
+              <div class='coupon_box coupon_box2 fl'>{insert name='ads' id=46 num=1}</div>  
+              <div class='coupon_box coupon_box3 fl'>{insert name='ads' id=47 num=1}</div>  
+		</div>
+    </div>
+
+   
+</div>
+      
+<div style="display:none"><a href="http://www.yunmoban.cn">ecshop模板</a></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+$('#sys .s1,#sys #a1').hover(function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+	$('#sys #a1').show();
+},function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+})
+$('#sys .s2,#sys #a2').hover(function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+	$('#sys #a2').show();
+},function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+})
+$('#sys .s3,#sys #a3').hover(function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+	$('#sys #a3').show();
+},function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+})
+$('body').click(function(){
+	$('#sys #a1,#sys #a2,#sys #a3').hide();
+})
+</script>
+<script type="text/javascript">
+$(function(){
+var i = 0;
+var top = 0;
+var hh = $('.longbox').height();
+var n = $('.longbox_content li').size();
+longbox_init();
+$('.longbox').hover(function(){
+      clearInterval(aa);
+},function(){
+       aa = setInterval(s,4000);
+})
+$('.longbox_nav li').mouseover(function(){
+  clearInterval(aa);
+      var index = $(this).index();
+      i=index;
+      top=hh*i;
+      $(this).addClass('current').siblings().removeClass('current');
+      $(this).parents('.longbox').children('.longbox_content').stop(false,true).animate({'margin-top':-top},300);
+})
+var s = function(){
+  // $('.longbox_nav li').unbind('hover', top);
+  top = i*hh;
+  $('.longbox_nav li').eq(i).addClass('current').siblings().removeClass('current');
+  $('.longbox_content').stop(false,true).animate({'margin-top':-top},300);
+  i++;
+ 
+  if(i==n)i=0;
+}
+function longbox_init(){
+$('<ul class="longbox_nav"></ul>').appendTo('.longbox')
+for(var j=0;j<n;j++){
+  ii = j+1
+  $('<li>'+ii+'</li>').appendTo('.longbox_nav');
+}
+$('.longbox_nav li:first').addClass('current');
+}
+//手表
+if($('.longbox_content li').size()>1){
+var aa = setInterval(s,4000);
+}else{
+$('.longbox_nav').hide();
+clearInterval(s);
+}
+})
+</script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('.flexslider').flexslider();
+    });
+</script>
+<script type="text/javascript">
+$(function(){
+  $('.seven').delay(3000)
+	 .animate({'height':90},1000,
+      	function(){
+      	  $('.seven').css({'background':'url(themes/hd/images/1920.jpg) no-repeat top center'})
+  });
+$('.store_nav li').each(function(){
+        var index = $(this).index();
+		var that = $(this);
+		that.hoverDelay({
+		outDuring: 120,
+		hoverDuring:120,
+		
+		hoverEvent:function(){
+			$(this).addClass('current').siblings().removeClass('current');
+	        $('.store_content>li').eq(index).show().siblings().hide();
+	   }
+	});	
+});
+$('dt a').click(function(){
+	$(this).addClass('current').siblings().removeClass('current');
+	var step = $(this).index();
+	$('.coupon_set').animate({'margin-top':-165*step},200);
+})
+})
+</script>
+</html>

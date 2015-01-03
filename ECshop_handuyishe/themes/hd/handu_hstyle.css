@@ -1,0 +1,257 @@
+
+
+.wrap{width:1200px;height:auto;overflow:hidden;margin:0 auto;padding:0;}
+
+.hstyle_logo{background: url(images/logo_hstyle.png) no-repeat;width: 300px;height: 97px;position: absolute;top: 18px;}
+
+/*hstyle brand*/
+.hstyle_brand{background: url(images/brand1.png) no-repeat -10px -11px;width: 650px;height: 31px;position: absolute;right:-30px;bottom: 1px;}
+.hstyle_brand span{display:block;width:132px;height:30px;float: left;}
+.hstyle_brand a{width: 80px;height: 30px;display: block;float: left;cursor: pointer;}
+.hstyle_brand a#a:hover{background: url(images/brand1.png) no-repeat -142px -57px;}
+.hstyle_brand a#b:hover{background: url(images/brand1.png) no-repeat -222px -57px;}
+.hstyle_brand a#c:hover{background: url(images/brand1.png) no-repeat -302px -57px;}
+.hstyle_brand a#d:hover{background: url(images/brand1.png) no-repeat -382px -57px;}
+.hstyle_brand a#e:hover{background: url(images/brand1.png) no-repeat -462px -57px;}
+.hstyle_brand a#f:hover{background: url(images/brand1.png) no-repeat -542px -57px;}
+
+
+.brand_s{background: url(images/brand_s.png) no-repeat -10px -11px;width: 800px;height: 31px;position: absolute;right:-30px;bottom: 1px;}
+.brand_s span{display:block;width:212px;height:30px;float: left;}
+.brand_s a{width: 80px;height: 30px;display: block;float: left;cursor: pointer;}
+.brand_s a#a:hover{background: url(images/brand_s.png) no-repeat -222px -57px;}
+.brand_s a#b:hover{background: url(images/brand_s.png) no-repeat -302px -57px;}
+.brand_s a#c:hover{background: url(images/brand_s.png) no-repeat -382px -57px;}
+.brand_s a#d:hover{background: url(images/brand_s.png) no-repeat -462px -57px;}
+.brand_s a#e:hover{background: url(images/brand_s.png) no-repeat -542px -57px;}
+.brand_s a#f:hover{background: url(images/brand_s.png) no-repeat -622px -57px;}
+.brand_s a#g:hover{background: url(images/brand_s.png) no-repeat -702px -57px;}
+
+
+
+.section{width:1220px;height:auto;overflow:hidden;padding-bottom:100px;float:left}
+.hstyle_top{width:100%;height:495px;position:relative}
+.hstyle_banner{width:1200px;height:auto;overflow:hidden;margin:0 auto}
+.notice{background:url(images/notice4.png) no-repeat 353px 0;width:100%;height:45px;position:absolute;bottom:0;z-index:0}
+
+ul li{float:left}
+
+
+/*hstyle navigation*/
+#header{background:#FFF;position:relative;z-index:9999;min-height:112px;_height:112px}
+.hstyle_head{position:relative;margin:0 auto;width: 1200px;height:120px;padding:5px 0;zoom:1}
+.hstyle_head .hd{margin-top:15px;width:auto;height: auto;overflow: hidden;_display:inline}
+.hstyle_head .hd a{float:left;display:block;width:370px;height:50px;background:url(images/logo.png) no-repeat;text-indent:-9999px;cursor:pointer;}
+.hstyle_head .bd{float:left;width:308px;height:47px;background-position:-4px -54px;_display:inline}
+
+.hstyle_nav .bd li.wid{margin: 0 10px;}
+.hstyle_nav{width:100%;height:35px;background:#c80a28;}
+.hstyle_nav.fixed{position:fixed;top:0;left:0;z-index:9990;_top:expression(eval(document.documentElement.scrollTop));_position:absolute}
+.hstyle_nav .bd{position:absolute;min-width: 1200px;width: 100%;background:#c80a28;}
+.hstyle_nav .bd li{float:left;height:35px;}
+.hstyle_nav .bd>li:hover{}
+.hstyle_nav .bd>li:hover>a{text-decoration: none;}
+
+.hstyle_nav .bd li a{font-size:16px;font-family:'Microsoft YaHei';display:block;width: 80px;padding: 0 15px;text-align:center;height:20px;line-height:20px;border-right:1px solid #ad001b;margin-top:7px;margin-right:1px;
+*display:inline;*position: relative;*top: 7px;}
+
+/*hstyle category*/
+.hstyle_cate{width:223px;height:493px;border:1px solid #DDD;background: #FFF;position: relative;z-index: 99;float: left;}
+.hstyle_cate h3{margin:3px 0 5px}
+.hstyle_cate h3 a{font:bold 12px '宋体';color:#333}
+.hstyle_cate ul{list-style:none;height:auto;overflow:hidden;font:12px '宋体';margin:5px 15px;*margin:5px 0px;padding-bottom:5px;*padding-bottom:10px;border-bottom:1px solid #ddd}
+.hstyle_cate ul:last-child {border: none;}
+.hstyle_cate li{display:inline-block;margin-right:15px;height:22px;line-height:22px;*zoom:1;*display: inline;}
+.hstyle_cate li a{float:left;color:#666}
+.hstyle_cate li a:hover{color:#c80a28;text-decoration: none;}
+.hstyle_cate i{display:inline-block;width: 16px;height: 16px;background: url(images/c.png) no-repeat;position:relative;top: 4px;margin-right: 8px;}
+.hstyle_cate #c1{background-position:-6px -7px;}
+.hstyle_cate #c2{background-position:-46px -7px;}
+.hstyle_cate #c3{background-position:-86px -7px;}
+.hstyle_cate #c4{background-position: -127px -7px;}
+.hstyle_cate #c5{background-position:-207px -7px;}
+.hstyle_cate #c6{background-position:-167px -7px;}
+
+/*hstyle category*/
+.hstyle_sad{width:330px;height:212px;background:#EEE;float:left;margin:20px 0;margin-right:30px}
+.hot_item{background: url(images/hot-item.png) no-repeat 0 50px;width: 90px;height: 212px;float: left;margin: 20px 0;}
+.top10{width: 1200px;height: 80px;background: url(images/top10.png) no-repeat top center;}
+
+/*hstyle group*/
+.groupTitle{font:18px/30px 'microsoft yahei';margin-bottom: 10px;float: left;width: 100%;text-indent: 6px;}
+.hstyle_group{position:relative;width:430px;height:242px;border:1px solid #DDD;text-align:right;float:left;margin-right:20px;overflow: hidden;}
+.hstyle_group h3{font: bold 15px/20px 'microsoft yahei';margin:5px 0 0;margin-right:4px;height: 56px;overflow: hidden;text-align: left;padding-left: 10px;}
+.hstyle_group p{font:13px/20px 'microsoft yahei';margin-right:4px}
+.group_name{height: 20px;overflow: hidden;}
+.tag{background:url(images/g.png) no-repeat;width:178px;height:39px;color:#fff;float:right;font:14px 'microsoft yahei';margin-top: 0;text-align: left;}
+.tag a{color:#fFF;font:14px/40px 'microsoft yahei';margin:0 10px 0 15px;display: block;float: left;}
+.tag em{font:25px/40px 'Arial';padding-right:7px;float: none;}
+.hstyle_group .deal-status{width:220px;*width:160px;margin:50px 0 20px 270px;font:14px '宋体';color:#666;*margin-bottom: 0;}
+.hstyle_group .deal-status strong,.hstyle_group .deal-status del{font:12px 'Arial'}
+.hstyle_group .deal-status li{float:left;width:75px;text-align:center;line-height:20px}
+.hstyle_group .deal-status li.red{color:#c80a28;border-left:1px solid #DDD}
+.hstyle_group .deal-status-count{padding:45px 0 0;font:12px '宋体';text-align:center;text-indent:15px;*padding-top: 5px}
+.hstyle_group .deal-status-count strong{font:25px/30px 'Arial';color:#60b300}
+.deal-status-count span{position:relative;top:-4px;margin-left:5px}
+.hstyle_group p.time_box{font:12px/40px '宋体';height:40px;margin:1px 0 0 23px;color:#333;text-align:center;text-indent:0}
+.time_box .icon{}
+.groupitem{float:left}
+.groupitem li{width:172px;height:246px;float:left;margin-right:19px}
+.groupitem img{width:100%}
+.groupitem img:hover {opacity: .9;filter: alpha(opacity=90);cursor: pointer;}
+
+
+/* product list */
+.hot{color:#ff838f;font-weight: 600;}
+.new{color:#159e8e;font-weight: 600;}
+
+.colorL,.colorS{width: 100%;height: 20px;overflow: hidden;margin:10px 0 0;}
+
+.colorL a{display:inline-block;width:23px;height:5px;margin:0 3px}
+.colorS a{display:inline-block;width:9px;height:9px;margin:0 3px}
+a.tname{height:18px;margin-top:2px;overflow: hidden;text-decoration: none;display: inline-block;}
+.price i{font: 14px 'microsoft yahei'}
+
+.section{width:1220px;height:auto;overflow:hidden;padding-bottom:30px;float:left}
+.section_title{width: 1200px;height: 80px;background: url(images/hstyle_title1.png) no-repeat top center;position: relative;}
+.section_title .mLink{display: block;width: 90px;height: 18px;right: 20px;position: absolute;top: 56px;}
+
+.section a:hover{text-decoration: none;cursor: pointer;}
+
+
+#hstyle_knit{background-position: 0 -11px; }
+#hstyle_blouse{background-position: 0 -115px; }
+#hstyle_dress{background-position:0 -323px }
+#hstyle_pants{background-position:0 -428px; }
+#hstyle_shoes{background-position: 0 -532px;}
+#hstyle_accessory{background-position:0  -636px;}
+#hstyle_bag{background-position: 0 -752px;}
+
+#hstyle_coat{background-position: 0 -219px; }
+.catname{ text-align:center;font:25px 'microsoft yahei';padding-top:20px;color:#ff838f;}
+
+.hstyle_knit li{width:224px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 20px 15px 0;color:#333}
+.hstyle_knit li img{width:100%;margin-bottom:5px}
+.hstyle_knit li p{margin:5px 0}
+.hstyle_knit .price{font:16px/14px 'Palatino Linotype'}
+.hstyle_knit a.tname{width: 120px;float: left;}
+
+
+.hstyle_blouse li{width:224px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 20px 15px 0;color:#333}
+.hstyle_blouse li img{width:100%;margin-bottom:5px}
+.hstyle_blouse .price{font:14px/18px Verdana, Geneva, sans-serif;margin-right:10px;float: left;margin-top: -1px;}
+.hstyle_blouse a.tname{width: 120px;}
+
+
+.hstyle_coat li{width:224px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 20px 15px 0;color:#333}
+.hstyle_coat li img{width:100%;margin-bottom:5px}
+.hstyle_coat li p{margin:5px 0}
+.hstyle_coat .price{font:16px 'Palatino Linotype'}
+.hstyle_coat li del{font:12px 'microsoft yahei';color: #999;padding-left: 8px;}
+.hstyle_coat p.name{height:20px; line-height:20px; overflow:hidden}
+
+.hstyle_dress li{width:224px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 20px 15px 0;color:#333}
+.hstyle_dress li img{width:100%;margin-bottom:10px}
+.hstyle_dress li p{margin:5px 0}
+.hstyle_dress a.tname{width: 180px;}
+.hstyle_dress .price{font:14px Verdana, Geneva, sans-serif}
+
+
+.hstyle_pants li{width:224px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 20px 15px 0;color:#333}
+.hstyle_pants li img{width:100%;margin-bottom:5px}
+.hstyle_pants li p{margin:5px 0}
+.hstyle_pants .price{font:16px/14px 'Palatino Linotype'}
+.hstyle_pants a.tname{width: 120px;float: left;}
+
+.hstyle_shoes li{width:289px;text-align:center;font:14px 'microsoft yahei';float:left;margin:15px 14px 15px 0;color:#333}
+.hstyle_shoes li img{width:259px;margin:15px}
+.hstyle_shoes li p{margin:5px 0;text-align:left}
+.hstyle_shoes .price{font:16px/14px 'Palatino Linotype'}
+.hstyle_shoes del{font:12px/22px 'microsoft yahei';color:#999}
+.qiang{background:#ff838f;font:14px 'microsoft yahei';color:#FFF;padding:0 6px 2px;margin-right:2px;margin-top:-5px;*margin-top: -25px;}
+
+
+.hstyle_bag li{width:289px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 14px 15px 0;color:#333}
+.hstyle_bag li img{width:259px;margin:15px}
+.hstyle_bag li p{margin:5px 0}
+.hstyle_bag .price{font:16px 'Palatino Linotype'}
+.hstyle_bag li del{font:12px 'microsoft yahei';color: #999;padding-left: 8px;}
+
+
+.hstyle_accessory li{width:289px;text-align:center;font:12px 'microsoft yahei';float:left;margin:15px 14px 15px 0;color:#333}
+.hstyle_accessory li img{width: 270px;margin: 5px;}
+.hstyle_accessory li p{margin:5px 0}
+.hstyle_accessory .price{font:16px 'Palatino Linotype'}
+
+
+
+.privilege{width:1260px;height:auto;overflow:hidden}
+.privilege li{position:relative;width:206px;height:206px;background:#f5f5f5;float:left;margin-right:40px;display:inline}
+.privilege img{width:100%}
+.privilege .info{background:#ff848f;width:100%;height:30px;position:absolute;bottom:0;left: 0;display:none}
+.privilege li:hover .info{display:block;text-align: center;}
+.privilege span{background:#FFF;font:12px '宋体';padding:2px 3px 2px 5px;color:#ff848f;vertical-align: 4px;}
+.privilege .info em{font:20px/30px 'impact';text-align:right;padding-right:10px;color:#FFF}
+.info i{font: 12px 'Arial'}
+
+.box820{width:820px;height:auto;float:left}
+.box820 ul{height: 236px;}
+.box820 ul li{float:left}
+.box355{width:355px;height:auto;float:right;margin-right: 20px;}
+
+.privilege h2{width: 100%;height: 30px;background: url(images/tt.png) no-repeat  0 -5px;margin-bottom:15px;}
+.box820 h2{width: 100%;height: 30px;background: url(images/tt.png) no-repeat 0 -47px;}
+.box355 h2{width: 100%;height: 40px;background: url(images/tt.png) no-repeat 0 -88px;}
+
+.match_list{width: 835px;}
+.match_list li{margin-right: 13px;background: #000;height: 220px;overflow: hidden;}
+.match_list li img:hover{opacity: .7;filter: alpha(opacity=70);cursor: pointer;}
+.fashion {overflow: hidden;height: 222px;margin-bottom: 3px;}
+.fashion li{float:left;width:100%;margin-bottom:4px}
+.fashion img{width:100px;float:right;margin:0 0 5px 2px}
+.fashion h3{width:240px;height:30px;float:left;font:14px/30px '宋体';color:#666}
+.fashion p{width:240px;float:left;font:12px/16px '宋体';color:#999}
+
+
+
+/* Slides container */
+#slides{position:relative;overflow:hidden;padding:0 40px;width:1120px;height:auto}
+.slides_container{display:none;width:100%}
+.slides_container div.slide{display:block;width:1220px;height:290px}
+
+.item{float:left;width:211px;margin:10px 0;margin-right:15px;text-align:center}
+.item p{margin:0;width:100%;height:22px;overflow:hidden;font:12px/22px 'microsoft yahei';color:#666}
+.item .hot{color:#ff838f}
+.item .price{font:16px/24px 'Lucida Console'}
+.item a{width: 180px;}
+.item img{width:100%;margin-bottom:5px;}
+
+/* Control Nav */
+.pagination {list-style:none; padding:0;display: none;width: 100%; text-align: center;margin: 10px 0 0;}
+.pagination li {margin: 0 0 0 10px; display: inline-block; zoom: 1; *display: inline;float: none;}
+.pagination li:first-child {margin: 0;}
+.pagination li a {width: 10px; height: 10px; display: block;background: #E6E6E6;border-radius:14px;cursor: pointer; text-indent: -9999px;}
+.pagination li a:hover {background-color: #F25555;}
+.pagination li.current  a {background-color: #C03;cursor: default;}
+
+#slides .current a{color:red}
+#slides .prev,#slides .next{position:absolute;z-index:99;top:100px;text-indent:-9999px;width:17px;height:29px;cursor:pointer}
+#slides .prev{left: 0;background: url(images/s_left.png) no-repeat;}
+#slides .next{right: 0;background: url(images/s_right.png) no-repeat;}
+
+
+
+/*=== nivo Styles ===*/
+
+#hstyle_banner{width:965px;height:450px;position:relative;float:right}
+#zzy_wrapper{width:100%;height:450px}
+.zzySlider{position:relative;width:100%;height:100%;background-position:top center}
+.nivoSlider img{position:absolute;top:0;left:0;display:none;width:100%}
+.nivoSlider a{border:0;display:block}
+.nivo-slice{display:block;position:absolute;z-index:50;height:100%}
+.nivoSlider a.nivo-imageLink{position:absolute;top:0;left:0;width:100%;height:100%;border:0;padding:0;margin:0;z-index:60;display:none}
+.nivo-controlNav{position:absolute;bottom:0;width:102%;text-align:center;z-index:999}
+.nivo-controlNav a{background:#999;color:#FFF;display:block;height:30px;float:left;font:12px/30px '宋体';position:relative;z-index:999;cursor:pointer;border-right:1px solid #2f2f2f;text-decoration:none;}
+.nivo-controlNav a.active{background:#484848;}
+.nivo-directionNav{width:100%;display:none}
+.nivo-directionNav a{position:absolute;display:block;top:45%;border:0;width:55px;height:64px;z-index:99;cursor:pointer;display:none;}

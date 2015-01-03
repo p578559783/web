@@ -1,0 +1,136 @@
+
+
+@charset "utf-8";
+/***********************CSS RESET*********************/
+
+
+/* FRAMEWORK */
+.wrap{width:1200px;height:auto;min-height:430px;margin:0 auto;overflow:hidden;padding:5px 0;font:12px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif}
+.banner{width:100%;height:auto;min-width:1007px;max-width:1200px;margin:0 auto;position:relative}
+.tonglan{margin:0 0 10px}
+.cart{position:absolute;width:160px;height:35px;background:url(images/cart.png) no-repeat;right:40px;top:25px;line-height:35px;text-indent:65px}
+.cart em{padding:0 4px;color:#fe0032}
+
+
+/* brand_collect */
+.brand_collect{width:1215px;height:auto;overflow:hidden;margin:5px 0;margin-bottom: 20px;}
+.abrand{width:190px;height:300px;margin-right:12px}
+.brand img{width:190px;height:300px}
+.floor{width:1215px;height:auto;margin-bottom:30px;float:left}
+.floor h1{width:100%;height:28px;background:#EEE;padding:1px 0;margin-bottom:8px;color:#FFF}
+
+
+#floor1 h1{background:url('images/floortitle.png') no-repeat 0 -3px #C80A29;}
+#floor2 h1{background:url('images/floortitle.png') no-repeat 0 -43px #B29553;}
+#floor3 h1{background:url('images/floortitle.png') no-repeat 0 -85px #353535;}
+#floor4 h1{background:url('images/floortitle.png') no-repeat 0 -127px #0799CC;}
+#floor5 h1{background:url('images/floortitle.png') no-repeat 0 -169px #F3F3F3;}
+#floor6 h1{background:url('images/floortitle.png') no-repeat 0 -211px #DCCDA2;}
+#floor7 h1{background:url('images/floortitle1.png') no-repeat #DA5455;}
+
+
+/* HOT WORDs */
+.floor li a{text-decoration:none;cursor:pointer}
+.keyWord a{padding:0 10px;color:#FFF;line-height:14px;margin:8px 0;border-right:1px solid #FFF;float:left}
+.keyWord .more{padding-left:12px;border-right:0}
+#floor5 .keyWord a{color:#444;border-color:#444}
+#floor6 .keyWord a{color:#7c4f0e;border-color:#7c4f0e}
+.floor>ul{width:100%;overflow:hidden;height:auto}
+.nav_bar{width:153px;height:390px;float:left;margin-right:10px}
+.nav_bar a{display:block;width:100%;height:65px}
+#floor1 .nav_bar{background:url(images/f1.jpg) no-repeat}
+#floor2 .nav_bar{background:url(images/f2.jpg) no-repeat}
+#floor3 .nav_bar{background:url(images/f3.jpg) no-repeat}
+#floor4 .nav_bar{background:url(images/f4.jpg) no-repeat}
+#floor5 .nav_bar{background:url(images/f5.jpg) no-repeat}
+#floor6 .nav_bar{background:url(images/f6.jpg) no-repeat}
+#floor7 .nav_bar{background:url(images/f7.jpg) no-repeat;height: 455px;}
+.R{width:1037px;height:390px;margin-bottom: 10px;overflow:hidden}
+
+
+/* SORT OF sAds */
+.sad1{background:#EEE;color:#FFF;width:785px;height:352px}
+.sad1 img{width:785px;height:352px}
+.sad2{background:#EEE;color:#FFF;width:242px;height:176px}
+.sad2 img{width:242px;height:176px}
+.sad3{background:#EEE;color:#FFF;width:242px;height:110px;margin-bottom:11px}
+.sad3 img{width:242px;height:110px}
+
+.sad4{height: 417px;}
+/* SORT OF BOXES */
+.mod_box{width:171px;height:171px;float:left;margin:0 6px 6px 0;background:url(images/box.png)}
+.tname{display:block;width:200px;height:20px;float:left;white-space:nowrap;overflow:hidden;color:#888;line-height:22px;text-indent:5px}
+.price{font-size:14px;color:#444}
+.price.em{color:#c80a26}
+
+.hstyle_box{background:#EEE;width:293px;height:293px;float:left;margin:9px 9px 0 0;position:relative}
+.hstyle_box img{width:100%}
+.hstyle_box .tag{display:block;background:#d23a53;position:absolute;right:2px;bottom:2px;color:#FFF;width:55px;height:24px;line-height:24px;text-align:center}
+
+.amh_box{float:left;width:291px;height:318px;border:1px solid #dedede;margin:6px 0 0;margin-right:9px}
+.amh_box img{width:281px;height:281px;margin:5px}
+.amh_box p{width:281px;margin:0 auto;height:24px;line-height:24px;text-align:center;white-space:nowrap;overflow:hidden}
+.amh_box .tname{width:202px}
+.amh_box .price{line-height:18px}
+
+.soneed_box{float:left;width:230px;height:290px;border:1px solid #eee;margin:6px 0 0;margin-right:10px}
+.soneed_box img{width:220px;height:220px;margin:6px;margin-bottom:2px}
+.soneed_box p{width:220px;margin:0 6px;height:20px;line-height:20px;text-align:center;overflow:hidden}
+.soneed_box .hot{color:#c80a28;font-weight:bold;text-align:center}
+
+.minizaru_box{float:left;width:232px;height:auto;background:#0199ec;margin:6px 0 0;margin-right:10px}
+.minizaru_box img{width:100%}
+.minizaru_box p{height:26px;line-height:26px;font:14px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;color:#FFF;padding:4px 4px 0}
+.minizaru_box ins{font-size:16px;font-weight:bold;color:#fffd02}
+.minizaru_box del{font-size:12px}
+
+.nibbuns_box{float:left;width:230px;height:290px;border:1px solid #eee;margin:6px 0 0;margin-right:10px}
+.nibbuns_box img{width:220px;height:220px;margin:6px;margin-bottom:2px}
+.nibbuns_box p{width:216px;margin:0 6px;height:20px;line-height:20px;text-align:center;overflow:hidden}
+.nibbuns_box a.qiang{position:relative;color:#c80a28;display:block;width:70px;margin:0 auto;background:url(images/arrows.png) no-repeat 63px -7px;line-height:17px}
+
+.sulv_box{width:230px;height:271px;float:left;border:1px solid #EEE;margin:6px 0 0;margin-right:10px}
+.sulv_box img{width:230px;height:230px}
+.sulv_box p{width:100%;height:20px;line-height:20px;overflow:hidden;color:#9f7731;font-family:'宋体'}
+.sulv_box a{color:#9f7731}
+.sulv_box .price{font-size:16px;font-weight:bold;color:#9f7731}
+
+.handu_box{float:left;width:226px;margin: 10px 0;margin-right: 17px;}
+.handu_box img{width:226px;margin-bottom: 5px;}
+.handu_box p{width:226px;margin:0 auto;height:24px;line-height:24px;text-align:center;white-space:nowrap;overflow:hidden}
+.handu_box .tname{width:118px;height: 24px;overflow: hidden;white-space: normal;font: 12px/24px 'microsoft YaHei';color: #8f8f8f;}
+.handu_box .price{font:14px/24px Tahoma;color:#d95454;}
+
+/* store_tab */
+#store_tab{width:1200px;margin:10px auto;height:auto;overflow:hidden}
+#store_tab ul.store_nav{background:#FFF;width:100%;height:40px;*height:42px;outline:0;border-left:1px #ddd solid;float:left;list-style:none}
+#store_tab .store_nav li{display:block;float:left;width:24.9%;*width:12.38%;height:100%;*height:40px;border-top:1px #ddd solid;border-right:1px #ddd solid;border-bottom:1px #ddd solid;background:#fbfbfb;font:bold 14px/1.5 "microsoft yahei","\5FAE\8F6F\96C5\9ED1";color:#444;text-align:center;line-height:40px;cursor:pointer}
+#store_tab .store_nav li.current{background:#FFF;filter:none;border-bottom:0;border-top:2px solid #fe0034;line-height:38px}
+#store_tab ul.store_content{list-style:none;width:1198px;border:1px #ddd solid;border-top:0;padding-bottom:10px;height:620px}
+#store_tab .store_content>li{width:100%;height:320px;*height:290px;background:#FFF;display:none}
+#store_tab .list li img{width:100%}
+#store_tab .list{width:100%;height:auto}
+#store_tab .list li{float:left;width:228px;overflow:hidden;margin:20px 0 0 10px}
+#store_tab .list p{width:100%;height:26px;line-height:26px;white-space:nowrap;overflow:hidden;padding:5px 0}
+#store_tab .list .tname{display:block;width:150px;color:#565656;text-decoration:none;text-indent:0}
+#store_tab .list span{text-align:right;width:70px;font:14px '微软雅黑';color:#ca0a2a}
+
+
+/* SALE FLOOR */
+.sale_floor{width:1220px;height:auto;padding:10px 0;overflow:hidden;position:relative}
+.news_section h1{width:696px;height:30px;font:16px/30px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;background:#e7e7e7;color:#444;text-indent:4px}
+.news_section{width:701px;height:auto;float:left;overflow:hidden;margin-right:10px}
+.news_box1{background:#e7e7e7;width:365px;height:321px;margin:5px 5px 0 0}
+.news_box2{background:#e7e7e7;width:326px;height:150px;margin:5px 5px 0 0}
+.news_box3{background:#e7e7e7;width:160px;height:165px;margin:5px 5px 0 0}
+.coupon_section{width:493px;height:auto;float:left;overflow:hidden}
+.coupon_section h1{width:487px;height:30px;font:16px/30px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;background:#e7e7e7;color:#444;text-indent:4px}
+.sale_floor h1 a{font:12px/30px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;padding-right:8px}
+.coupon_box1{background:#e7e7e7;width:159px;height:150px;margin:5px 5px 0 0}
+.coupon_box2{background:#e7e7e7;width:324px;height:165px;margin:5px 5px 0 0}
+.coupon_box3{background:#e7e7e7;width:159px;height:165px;margin:5px 5px 0 0}
+.news_box,.coupon_box{position:relative;overflow:hidden}
+
+
+.news_box p,.coupon_box p{width:100%;height:28px;line-height:28px;position:absolute;bottom:0;background:#000;background:rgba(0,0,0,0.7);opacity:.7\0;color:#FFF;display:none;text-indent:5px}
+.coupon_box:hover p{display:block}

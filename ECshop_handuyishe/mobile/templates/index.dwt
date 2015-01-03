@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$shop_name}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="ecy.cc">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="style/index.css" />
+<link rel="stylesheet" type="text/css" href="style/flex.css" />
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
+</head>
+<body>
+{include file='head.dwt'}
+
+	<div class='wap_wrap'>
+
+          <div class="flex-container flex_300" >
+                 <div class="flexslider" >
+                       <ul class="slides">                           
+                                                 
+                          <li>
+                              <a href="#" target="_blank"><img src="./../{$phonepath}/images/ad/1.png" title=""></a>
+                          </li>
+                                                 
+                          <li>
+                              <a href="#" target="_blank"><img src="./../{$phonepath}/images/ad/2.png" title=""></a>
+                          </li>
+                                                 
+                          <li>
+                              <a href="#" target="_blank"><img src="./../{$phonepath}/images/ad/3.png" title=""></a>
+                          </li>
+                                                 
+                          <li>
+                              <a href="#" target="_blank"><img src="./../{$phonepath}/images/ad/4.png" title=""></a>
+                          </li>
+                       </ul>
+                </div>
+          </div>
+    
+               <div class="searchw">   
+                    <form method="get" action="search.php">
+                        <input id="keywords" class="inp-search" name="keywords" value="" autocomplete="off" placeholder="搜索商品">
+                           <input type="submit" class="search_btn2" id value="" />          
+                    </form>
+                </div>
+
+
+          <div class='icon_set'>
+          	  <ul>
+	          	  	<li>
+                          <a href="user.php"  target="_blank">
+	          	  		<img src='./../{$phonepath}/images/icon1.png' width='50'>
+	          	  		<p>用户中心</p>
+                        </a>
+	          	  	</li>
+	          	  	<li>
+                       <a href="cart.php"  target="_blank">
+	          	  		<img src='./../{$phonepath}/images/icon2.png' width='50'>
+	          	  		<p>我的购物车</p>
+                                    </a>
+	          	  	</li>
+	          	  	<li>
+                         <a href="brand.php"  target="_blank">
+	          	  		<img src='./../{$phonepath}/images/icon3.png' width='50'>
+	          	  		<p>品牌 </p>
+                         </a>
+	          	  	</li>
+	          	  	<li>
+                        <a href="#"  target="_blank">
+	          	  		<img src='./../{$phonepath}/images/icon4.png' width='50'>
+	          	  		<p>每日新品</p>
+                        </a>
+	          	  	</li>
+          	  </ul>
+          </div>
+
+
+          <div class='today'>
+          	   <h2 class='r fl' style='padding-left: 10px;'>限时特惠</br><span>挑战价格地平线</span></h2>
+
+               <div class='arrow'></div>
+
+          	   <ul>         
+               {foreach from=$cat_best_goods item=best_data name=goo}                    
+                               <li>
+                                <a href="goods.php?id={$best_data.id}" title="{$best_data.short_name}" target="_blank" class="product_name">
+                                    <img src="./../{$best_data.thumb}" width='110' height="110">
+                                </a>
+                                    <p class='gname'><a href="goods.php?id={$best_data.id}" title="{$best_data.short_name}" target="_blank" class="product_name">{$best_data.short_name}</a></p>
+                                    <p class='pr'>{if $best_data.promote_price}{$best_data.promote_price}{else}{$best_data.shop_price}{/if}</p>
+                            </li>
+                  {/foreach}	            
+          	  </ul>
+          </div>
+
+
+          
+          <h2 class='red_t'>一路有你感恩特惠</h2>
+
+
+        <ul class='banner_s'>
+            <li>
+                <a href="category.php?c_id=255">
+              <img src='./../{$phonepath}/images/ad/b1.png'>
+              <p>79元包邮&nbsp;&nbsp;&nbsp;&nbsp;年度大促销</p>
+                </a>
+            </li>
+            <li>
+             <a href="category.php?c_id=244">
+              <img src='./../{$phonepath}/images/ad/b2.png'>
+              <p>新品上新&nbsp;&nbsp;&nbsp;&nbsp;年度大促销</p>
+             </a>
+            </li>
+       </ul>
+
+          <h2 class='red_t'>最IN时尚单品一网打尽</h2>
+
+
+          <div class="product_11">
+              
+          	   <ul>
+                   {foreach from=$cat_new_goods item=best_data name=goo}                   
+    	              <li>
+                            <a href="goods.php?id={$best_data.id}" title="{$best_data.short_name}"  target="_blank">
+                                
+                              <img src="./../{$best_data.thumb}" alt="{$best_data.short_name}">
+                            </a>
+                            
+                            <p>
+                               <span class="fl">{if $best_data.promote_price}{$best_data.promote_price}{else}{$best_data.shop_price}{/if}</span>
+                               <del class="fl">{$best_data.market_price}</del>
+                            </p>
+                             <p class='gname'><a href="goods.php?id={$best_data.id}" title="{$best_data.short_name}" target="_blank" class="product_name">{$best_data.short_name}</a></p>
+                            <p>
+                              <a class="q fr" href="goods.php?id={$best_data.id}">立即抢购</a>
+                            </p>
+                      </li>	
+                       {/foreach}                
+    	           
+                   </ul>
+          </div>
+
+
+	      <a href="#top" class="verify_pay blue_border">返回顶部</a>
+   
+
+{include file='foot.dwt'}
+</body>
+
+</body>
+</html>

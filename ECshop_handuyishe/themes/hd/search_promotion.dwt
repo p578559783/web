@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="handu_base.css" rel="stylesheet" type="text/css" />
+<link href="handu_style.css" rel="stylesheet" type="text/css" />
+<link href="zhekou.css" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='utils.js,common.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class='wrap'>
+<img src="images/zk.jpg" alt="折扣专区广告">
+<!-- {if isset($goods_list)} -->
+      <div class='discount_contain'>                
+                <h1> 
+                	折扣专区                	
+                  
+                  <div class="paixu" style="float:right;line-height:54px;">
+				<span style="float:left;font: 14px/42px '宋体';color:#777;">默认排序：</span>
+				<span class="paixu_left" style="float:left;line-height:40px">
+				<form method="GET" class="sort" name="listform">
+					
+				  <a href="search.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.jpg" alt="{$lang.sort.goods_id}"></a>
+  <a href="search.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.jpg" alt="{$lang.sort.shop_price}"></a>
+  <a href="search.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=salenum&order=<!-- {if $pager.sort == 'salenum' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/salenum_<!-- {if $pager.sort == 'salenum'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.jpg" alt="{$lang.sort.last_update}"></a>
+
+  <input type="hidden" name="category" value="{$category}" />
+  <input type="hidden" name="display" value="{$pager.display}" id="display" />
+  <input type="hidden" name="brand" value="{$brand_id}" />
+  <input type="hidden" name="price_min" value="{$price_min}" />
+  <input type="hidden" name="price_max" value="{$price_max}" />
+  <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+  <input type="hidden" name="page" value="{$pager.page}" />
+  <input type="hidden" name="sort" value="{$pager.sort}" />
+  <input type="hidden" name="order" value="{$pager.order}" />
+				</form>
+				</span>
+			
+			</div>
+</h1>          
+				
+                <ul class=" cate_list">
+                   
+				
+				 <!--{foreach from=$goods_list item=goods}-->
+    <!-- {if $goods.goods_id} -->	
+                    <li class='m'>
+                        <a href="{$goods.url}" title="{$goods.name|escape:html}" class="list_pic relative" target="_blank">
+                            <img src="{$goods.goods_thumb}" alt="{$goods.goods_name}">
+                            <div class='tag2'><em>{$goods.cuxiao_zhekou_price}</em></div>
+                        </a>
+                            <a target="_blank" class="name" href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a>
+                         <p class='price'>
+                            <span>限时折扣:</span><!--{if $goods.promote_price neq "" } -->{$goods.promote_price}<!--{else}-->{$goods.shop_price}<!--{/if}--><del>{$goods.market_price}</del>
+                        </p>
+                    </li>
+       				
+                      <!--{/if}-->
+     <!--{/foreach}-->     
+       				                  
+                </ul>
+                        
+    			
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+ <div  class="mod_page">
+      
+         <!-- {if $pager.page_first} --><a href="{$pager.page_first}">{$lang.page_first}</a><!-- {/if} -->
+    <!-- {if $pager.page_prev} --><a href="{$pager.page_prev}" class="prev">{$lang.page_prev}</a><!-- {else} --><a href="javascript:void(0);" class="prev">{$lang.page_prev}</a><!-- {/if} -->
+	       
+                        <!-- {if $pager.page_count neq 1} -->
+                            <!--{foreach from=$pager.page_number key=key item=item}-->
+                              <!-- {if $pager.page eq $key} -->
+                             <strong class="current">{$key}</strong>
+                              <!-- {else} -->
+                              <a href="{$item}">{$key}</a>
+                              <!-- {/if} -->
+                            <!--{/foreach}-->
+                            <!-- {/if} -->
+
+   <!-- {if $pager.page_next} --><a href="{$pager.page_next}" class="next"><span>{$lang.page_next}</span></a><!-- {else} --><a href="javascript:void(0);" class="next"><span>{$lang.page_next}</span></a><!-- {/if} -->
+<!-- {if $pager.page_last} --><a href="{$pager.page_last}" class="last">{$lang.page_last}</a><!-- {/if} -->               
+    </div>
+</form>
+<script type="Text/Javascript" language="JavaScript">
+<!--
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+//-->
+</script>
+                
+                
+              
+			
+            </div>
+</div> <!--{/if}-->
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

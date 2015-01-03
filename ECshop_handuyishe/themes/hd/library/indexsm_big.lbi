@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="block">
+<div id="adBig">
+<a href="#" target="_blank"><img style="float:left"  src="../images/big.jpg"  border="0"/></a>
+</div>
+<div id="adSmall" style="display:none;">
+<a href="#" target="_blank"><img style="float:left"   src="../images/small.jpg" border="0" /></a>
+</div>
+</div>
+<div class="blank"></div>
+<script>
+$(function(){
+ setTimeout("showImage();",10000);
+});
+function showImage()
+{
+    $("#adBig").slideUp(1000,function()
+	{
+		$("#adSmall").slideDown(1000);
+	});
+ }
+</script> 

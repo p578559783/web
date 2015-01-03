@@ -1,0 +1,9 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <form name="searchForm" method="get" action="search.php" class="search" id="searchForm">
+          <div class="new-cate-srch">
+			<div class="new-srch-box">
+            	<input name="keyword" id="newkeyword" type="text" required class="new-srch-input" value="" placeholder="请输入关键词"><a href="javascript:void(0)" target="_self" onclick="$('#searchForm').submit();" class="new-s-srch"><span></span></a>
+            </div>
+        </div>
+    </form>
+    

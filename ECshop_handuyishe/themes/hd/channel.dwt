@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="handu_base.css" rel="stylesheet" type="text/css" />
+<link href="handu_hstyle.css" rel="stylesheet" type="text/css" />
+<link href="hstyle_flex.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/hstyle_slide.js"></script>
+</head>
+<body>
+<html>
+<!--[if IE 6]>
+<div id="yellowtip" style="width: 100%; background-color: rgb(254, 246, 227); border-top-width: 1px; border-bottom-width: 1px; border-style: solid none; border-top-color: rgb(229, 205, 150); border-bottom-color: rgb(229, 205, 150); height: 33px; min-width: 920px; z-index: 99999; background-position: initial initial; background-repeat: initial initial;">
+    <div style="margin:0 auto;width:900px;line-height:33px;text-align:center;color:#82654D;">温馨提示：尊敬的用户，现在检测到您正在使用IE6浏览器。为了确保您的购物安全和更好的用户体验，请<a class="se6_download" style="color:#1C79A1" href="http://chrome.360.cn/" target="_blank">下载360极速浏览器</a>或者升级更高版本的IE浏览器</div>
+    <div id="yellowtipclose" style="display:none;"></div>
+  </div>
+<![endif]-->
+<div class='toolbar'>
+    <div class="w">
+        <ul class="fl lh">
+            <li>
+                <a href="../index.php"  style='color:#c80a28' target="_blank">返回首页</a>
+            </li>
+            <li>
+                <a href="javascript:window.external.addFavorite()" id='AddFavorite'rel="nofollow">收藏本站</a>
+            </li>
+      <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+      <li><a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a></li>
+    <!-- {/foreach} -->
+            <li>
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=77898852&amp;site=qq&amp;menu=yes" target="_blank">在线客服</a>
+            </li>
+            <li><a href="user.php" target="_blank" >会员俱乐部</a></li>
+        </ul>
+        
+         <ul class="fr">
+            <li class="fore ld" id="phone_icon">
+                <a href="/apps.html" target="_blank">
+                    <img src="images/phone.png" alt="手机客户端" class="fl" style="margin-right: 4px;">
+                    <span>手机版</span>
+                </a>
+            </li>
+            <li class="fore ld" id='wireless_icon' style='padding:0;margin-right:-8px;'>
+                <span> 关注我们</span>
+                <img src='images/weixin.png' alt='官方微信' id='weixin' class='fl' style='margin:7px;margin-right:9px;'>
+            </li>
+        </ul>
+        {insert_scripts files='utils.js'}
+        <ul class="fr" id="ECS_MEMBERZONE">
+   <font>{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+        </ul>
+        <span class="clr"></span>
+    </div>
+</div>
+
+<div id="header" >
+    <div class="hstyle_head clearfix" >
+        <a href="./"><div class="hstyle_logo"></div></a>
+        
+        <div class='tab_search' >
+        			<form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" >
+                <input  onkeydown="if (event.keycode==13) {}" id='keyword' class='searchinput' value="- 搜索商品 -"  onfocus="if(this.value=='- 搜索商品 -')value='';" onblur="if(this.value=='')value='- 搜索商品 -';" title='search' size='10' name="keywords" >
+                
+                <input class='searchaction' onfocus="if(document.forms['search'].searchinput.value=='- 搜索商品 -')document.forms['search'].searchinput.value='';"  onclick="document.getElementById('searchForm').submit()" border=0 hspace=2 alt=search src="images/search_btn1.png"  type='image'>
+                  </form>  
+        </div>
+        
+        <div class='keyW'>
+            <em>热门搜索:</em>
+      {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+        </div>
+        
+        		 
+        <div class='brandColumn_s' style='bottom:0;right:0'>
+            <span></span>
+              <a id="a" href="#" target="_blank"></a>
+              <a id="b" href="#" target="_blank"></a>
+              <a id="c" href="#" target="_blank"></a>
+              <a id="d" href="#" target="_blank"></a>
+              <a id="e" href="#" target="_blank"></a>
+              <a id="f" href="#" target="_blank"></a>
+              <a id="g" href="#" target="_blank"></a>
+              <a id="h" href="#" target="_blank"></a>
+        </div>
+    </div>
+    <div class="hstyle_nav" >
+        <div class="navbg_r">
+        </div>
+        <div class="nav_w clearfix">
+            <ul class="bd">
+                <li class="rbg"> <a class="goodnews fl" href="./" style=" width: 200px;border:none;top:0;"> 全部商品分类 </a> </li>
+                <li class="discovery" > <a href="./"  target="_blank"> 首页 </a> </li>
+                <?php $this->assign('catchild', get_child_tree($this->_var['category']));?> 
+                <!--{foreach from=$catchild item=cat name=catspan}-->
+             <!--{if $smarty.foreach.catspan.iteration<=7}-->
+              <li class="discovery"><a href="{$cat.url}" target="_blank">{$cat.name|escape:html}</a></li>
+            <!--{/if}-->
+        <!--{/foreach}-->
+                 </ul>
+         </div>
+    </div>
+</div>
+<div class='hstyle_top'>
+      <div class='hstyle_banner'>
+             <div class="hstyle_cate">
+                      
+                      
+      <!--{foreach from=$categories item=cat}-->
+	{if $category eq $cat.id}
+    <!--{if $topcat_id eq $cat.id}--> 
+		 <!--{foreach from=$cat.cat_id item=child name=curn}-->
+                      <ul class="">
+                          <h3><i id='c{$smarty.foreach.curn.iteration}'></i><a href="{$child.url}" id="menu2" target="_blank">{$child.name|escape:html}</a></h3>
+                   <!--{foreach from=$child.cat_id item=childer name=curn}-->
+			<li> <a href="{$childer.url}">{$childer.name|escape:html}</a></li>
+			<!--{/foreach}-->
+                   </ul>
+                       
+              <!--{/foreach}--> 
+	<!--{/if}--> 
+	{/if}
+	<!--{/foreach}--> 
+                </div>
+              <div id="hstyle_banner">
+            <div id="zzy_wrapper">
+                <div class="zzySlider" >
+                  <?php $this->assign('ecy_adflash', get_ecy_classpic($this->_var['category'],1)); ?>
+                 {foreach from=$ecy_adflash item=item}
+                 <a href="{$item.site_url}" target="_blank"><img src="data/ecyclasspic/{$item.brand_logo}" alt="{$item.brand_name}" title="{$item.brand_name}" /></a>
+                 {/foreach}  	                     
+                </div>
+            </div>
+        </div>
+        
+          <div class='notice' style='width: 1200px;background-position:0 0'>
+       <a href="#" target="_blank" style="width:92px;height:45px;display: block;float: right;margin-right: 17%;"></a>
+     </div>
+      </div>
+   
+</div>
+<div class='wrap'>
+      
+      <div class='section' style='margin-bottom: -20px;'>
+                       <?php $this->assign('ecy_adpic_2', get_ecy_classpic_one($GLOBALS['smarty']->_var['category'],2)); ?>
+                       <div class='hstyle_sad'><a href="{$ecy_adpic_2.site_url}" target="_blank"><img src="data/ecyclasspic/{$ecy_adpic_2.brand_logo}" class='fl'></a></div>  
+                       <?php $this->assign('ecy_adpic_3', get_ecy_classpic_one($GLOBALS['smarty']->_var['category'],3)); ?>
+                       <div class='hstyle_sad'><a href="{$ecy_adpic_3.site_url}" target="_blank"><img src="data/ecyclasspic/{$ecy_adpic_3.brand_logo}" class='fl'></a></div>
+             
+            <div class='hot_item'></div>
+            <div class="flex-container flex_300" id='quikflex'>
+                 <div class="flexslider" >
+                       <ul class="slides">
+                           <?php $this->assign('ecy_adflash1', get_ecy_classpic($this->_var['category'],4)); ?>
+                 {foreach from=$ecy_adflash1 item=item}
+                            <li>
+                              <a href="{$item.site_url}" target="_blank"><img src="data/ecyclasspic/{$item.brand_logo}" alt="{$item.brand_name}" title="{$item.brand_name}" /></a>
+                          </li>
+                           {/foreach}                         
+                      </ul>
+                </div>
+            </div>
+
+      </div>
+      
+   
+  <div class='section'>
+      <h2 class='top10' style='position:relative'><a href="#" target="_blank" style='display: block;width: 50px;height: 18px;right: 17px;position: absolute;top: 25px;'></a></h2>
+      <div id="slides">
+        <div class="slides_container">
+          
+
+          <div class="slide">
+               <?php
+				$children = get_children($this->_var['category']);
+				$this->assign('hot_goodss',   get_category_recommend_goods('hot',$children,10)); 
+			?>
+     <!--{foreach from=$hot_goodss item=goods name=bestcun}-->
+      <!--{if $smarty.foreach.bestcun.iteration<6}-->
+                    <div class="item">
+                    <a  href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a>
+                      <p class='hot'>热卖{$goods.salenum}件</p>
+                      <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a></p>
+                      <p><span class="price"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></span></p>
+                    </div>
+  <!--{/if}-->
+              <!--{/foreach}-->   
+                            
+              	 </div>
+                 		 <div class="slide" >
+              	 	   
+                      <!--{foreach from=$hot_goodss item=goods name=bestcun}-->
+      <!--{if $smarty.foreach.bestcun.iteration>5}-->
+                    <div class="item">
+                    <a  href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a>
+                      <p class='hot'>热卖{$goods.salenum}件</p>
+                      <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.name|escape:html}</a></p>
+                      <p><span class="price"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></span></p>
+                    </div>
+  <!--{/if}-->
+              <!--{/foreach}-->   
+                  
+         
+          </div>
+          
+        </div>
+      </div>
+  </div>
+  
+     
+ <?php $this->assign('get_child_list',get_child_treec($this->_var['category']));?>
+<!--{foreach from=$get_child_list item=cname}-->
+   <div class='section'>
+     <h2 class='section_title' id='hstyle_coat'><div class="catname">{$cname.name}</div><a href="category.php?id={$cname.id}" target="_blank" class='mLink'></a></h2>
+      <ul class="hstyle_coat">
+       <?php $this->assign("cat_goods",ecy_cat_goods($GLOBALS['smarty']->_var['cname']['id'],10));?>        
+                   <!--{foreach from=$cat_goods item=goods name=top_goods}-->
+                              <li>
+                      <a title="{$goods.name}" href="{$goods.url}" target="_blank">
+                        <img src="{$goods.thumb}" alt="{$goods.name|escape:html}">
+                      </a>
+                      <p><span class="price"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></span></p>
+                      <p class="name">
+                      <a target="_blank" title="{$goods.name}" class='tname' href="{$goods.url}">{$goods.name}</a>
+                      </p>
+                   </li>
+               <!--{/foreach}-->      
+      </ul>
+    </div>
+      
+    <!--{/foreach}-->
+      
+      <div class='section'>
+          <ul class='privilege'>
+                     <h2 style='position:relative;'><a  href="#" target="_blank" style="display: block; width: 50px; height: 18px; right: 63px; position: absolute; top: 6px;">  </a></h2>
+            <?php
+				$children = get_children($this->_var['category']);
+				$this->assign('best_goodss',   get_category_recommend_goods('best',$children,5)); 
+			?>
+     <!--{foreach from=$best_goodss item=goods name=bestcun}-->
+                 <li>
+                		<a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"></a>
+                        <div class='info'><span>{$goods.cuxiao_zhekou_price}折</span> <em><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></em></div>
+                
+                </li>
+            <!--{/foreach}-->              
+          </ul>
+      </div>
+ 
+ 
+</div>
+      
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<script>
+$(function(){
+  $('#slides').slides({
+    slideSpeed: 0,
+    preload: false,
+    generateNextPrev: true
+  });
+  var ii =0;
+   $('.flex_300 .flexslider').flexslider({
+         animation: "slide",   
+         slideshow: true,
+         pauseOnHover: true,
+         useCSS: false,
+         animationDuration: 300,    
+         slideshowSpeed: 2000
+   });
+});
+</script>
+<script type="text/javascript">
+String.prototype.about = function()           //保留1位小数
+{ 
+   return this.substring(0,this.indexOf('.')+0)
+} 
+$(function(){
+    $('.zzySlider').nivoSlider({
+        effect:'fade',
+        directionNav:false,
+        captionOpacity:0,
+        slices:1,
+        pauseTime: 4000,
+        animSpeed: 200
+    });
+    var count = $('.nivo-controlNav a').size();
+    var w = 965/count;
+    var ww = w.toString().about()+'px';
+    $('.nivo-controlNav a').css({'width':ww});
+});
+/*点击切换商品*/
+function change_goods(goodsid)
+{
+	var goodsId = goodsid;
+	 $('.hstyle_group').hide();
+	 $('#tuangou'+goodsId).show();
+ }
+ 
+function checkSearchForm(){
+	if(document.getElementById('keyword').value){
+		return true;
+	}else{
+		alert("请输入搜索关键词！");
+	    return false;
+	}
+}
+</script>
+</body>
+</html>

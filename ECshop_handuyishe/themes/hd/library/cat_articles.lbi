@@ -1,0 +1,7 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="h5"><a target="_blank" href="{$articles_cat.url}">更多&raquo;</a>{$articles_cat.name|escape:html}</div>
+<ul>
+  <!--{foreach from=$articles item=article_item}-->
+  <li><a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.title|truncate:16}</a> {$article.add_time}</li>
+  <!--{/foreach}-->
+</ul>

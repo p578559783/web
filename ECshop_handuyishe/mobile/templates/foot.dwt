@@ -1,0 +1,15 @@
+﻿<footer><p class="version"><a href="index.php" >首页</a>  <a href="kefu.php">取系我们</a></p><p > © 2011 Handuyishe  </p><p>All Rights Reserved. </p><p>ECSHOP触屏手机模板</p></footer></p></div>
+</div>
+<script src="js/hdcommon.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+   $('.flex_300 .flexslider').flexslider({
+         animation: "slide",     
+         before: function(){
+         $('.flex_300').css({'background':'#000'});
+         }
+   });
+
+});
+//截取字符串
+</script>

@@ -1,0 +1,22 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="main">
+    <div class='menu-list'>
+	<ul>
+   <li><a href="index.php">返回首页</a></li>
+    {if $user_name}
+	<li><a href='user.php?act=user_center'>用户中心</a></li>
+    <li><a href='user.php?act=logout'>退出</a></li>
+	{else}
+	<li><a href="user.php?act=login">登录</a></li><li><a href="user.php?act=register">注册</a></li>
+	{/if}
+		      {foreach from=$cat_array item=cat_data name=curn}
+        <li><a href="category.php?cid={$cat_data.id}">{$cat_data.name}</a></li>
+        {/foreach}
+	</ul>
+</div>	      
+	<div class='header'>
+                <a href="javascript:void(0)" class="top_bt fl" id='menu-btn'></a>
+                <a href="javascript:void(0)" class="logo">韩都衣舍</a>
+                <a href="user.php"><div class='user_btn'></div></a>
+                <a href="cart.php" id="cart-btn"></a>
+	</div>

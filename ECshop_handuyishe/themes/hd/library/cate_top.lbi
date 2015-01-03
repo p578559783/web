@@ -1,0 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <!--{if $category==17 || $category==18 || $category==19 ||  $category==20 || $category==21 ||  $category==22 || $category==23 || $category==24}-->
+  <img src="images/cate{$category}.jpg" />
+  <!-- {/if} -->

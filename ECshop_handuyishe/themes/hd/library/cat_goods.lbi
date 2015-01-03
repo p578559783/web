@@ -1,0 +1,41 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <!--{foreach from=$cat_goods item=goods}-->
+ {if $goods_cat.id eq 16} 
+  <li class='amh_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+            	    <a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank" class="tname">{$goods.short_name|escape:html}</a></a>
+                    <span class="price fr"><!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+            	</p>
+		     </li>    
+   {elseif  $goods_cat.id eq 18} 
+   	<li class="minizaru_box">
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p>
+		        	<span class="fl">原价<del>{$goods.market_price}</del></span>
+		        	<span class="fr">热销价<ins>
+                    <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></ins></span>
+		        </p>
+	</li>      
+   {else}                      
+  <li class='nibbuns_box'>
+		        <a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" ></a>
+		        <p><span class="price"> <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span></p>
+	       	    <p><a href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">{$goods.short_name|escape:html}</a></p>
+	       	    <p><a class="qiang" href="{$goods.url}" title="{$goods.name|escape:html}" target="_blank">立即购买</a></p>
+		      </li>
+        
+   {/if}
+<!--{/foreach}-->

@@ -1,0 +1,60 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- 邮件订阅-->
+<div class="h6">{$lang.email_subscribe}</div>
+我们会将最新的资讯发到您的Email
+<input type="text" id="user_email" name="" value="输入您的电子邮箱地址" class="email text" />
+<input type="submit" value="订阅" class="sbt" onclick="add_email_list();"/>
+<script type="text/javascript">
+var email = document.getElementById('user_email');
+function add_email_list()
+{
+
+	if (check_email())
+	{
+	 $.ajax({
+	   url: 'user.php?act=email_list&job=add&email=' + email.value,
+	   type: "GET",
+	   data: '',
+	   dataType: 'text',
+	   success: function(res){
+	   	alert(res);
+		}
+	 });
+	}
+}
+
+function rep_add_email_list(text)
+{
+	alert(text);
+}
+function cancel_email_list()
+{
+	if (check_email())
+	{
+		Ajax.call('user.php?act=email_list&job=del&email=' + email.value, '', rep_cancel_email_list, 'GET', 'TEXT');
+	}
+}
+function rep_cancel_email_list(text)
+{
+	alert(text);
+}
+function check_email()
+{
+
+	if (recheck_email(email.value))
+	{
+		return true;
+	}
+	else
+	{
+		alert('{$lang.email_invalid}');
+		return false;
+	}
+}
+function recheck_email(email)
+{
+	var reg1 = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)/;
+	
+	return reg1.test( email );
+}
+</script>

@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* Browser Resets */
+
+.flex-container a:active,
+.flexslider a:active {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Size Style
+*********************************/ 
+
+.flex_300{
+	width:360px;height: 212px;
+	margin:20px 30px;
+}
+
+.flex_1200{
+	width:1200px;height: 450px;margin:10px auto;
+}
+
+.flex_1200 li img {
+width: 1200px;
+height: 450px;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+#quikflex{
+margin:20px;
+float: right;
+}
+
+.flex_300 .flexslider {width:360px;height: 212px;padding: 0;}
+.flex_300 .flexslider .slides{overflow: hidden;padding-left: 30px;}
+.flexslider .slides .list_pic img{width: auto;}
+.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {background: #fff; position: relative;border-radius: 5px; zoom: 1;}
+.flexslider .slides {zoom: 1;}
+.flexslider .slides > li {position: relative;}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {zoom: 1; position: relative;}
+
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
+.flex-caption {width: 96%; padding: 2%; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}
+
+/* Direction Nav */
+.flex_300 .flex-direction-nav li a {width:20px; height:212px; display: block; background: url(images/arr.png) no-repeat #FFF; position: absolute; top: 0; cursor: pointer; text-indent: -9999px;}
+.flex_300 .flex-direction-nav li .next {background-position: -20px 100px; right:0;}
+.flex_300 .flex-direction-nav li .prev {background-position: 0 100px;left: 0;}
+.flex_300 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+.flex_300 /* Control Nav */
+.flex_300 .flex-control-nav {width: 100%; position: absolute; bottom:10px; *bottom:0px;text-align: center;display: none;}
+
+.flex-control-nav li {margin: 0 0 0 8px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li:first-child {margin: 0;}
+.flex-control-nav li a {width: 13px; height: 13px; display: block;background: #E6E6E6;border-radius: 20px;cursor: pointer; text-indent: -9999px;}
+.flex-control-nav li a:hover {background-color: #d95454;}
+.flex-control-nav li a.active {background-color: #d95454;cursor: default;}
+
+
+
+.flex_1200 .flex-direction-nav li a {width: 55px;height: 64px;  background: url(images/new_preNext.png) no-repeat; position: absolute; top: 50%; margin-top:-32px;cursor: pointer; display: none;text-indent: -9999px;}
+.flex_1200:hover .flex-direction-nav li a{display: block;}
+.flex_1200 .flex-direction-nav li .next {background-position: right top; right:0;}
+.flex_1200 .flex-direction-nav li .prev {background-position: left top;left: 0;}
+
+.flex_1200 .flex-control-nav{
+	width: 100%;
+	background: rgba(0,0,0,0.3);
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.flex_1200 .flex-control-nav li{margin: 10px 5px}
+.flex_1200 .flex-control-nav li a:hover {background-color: #333;cursor: default;}
+.flex_1200 .flex-control-nav li a.active {background-color: #000;cursor: default;}
+
+#minizaru_banner .flex-control-nav a:hover{background: #0799cb;}
+#minizaru_banner .flex-control-nav a.active {background-color: #0799cb;cursor: default;}
+
+/* Direction Nav */
+.flex_mini .flexslider {width:360px;height: 260px;padding: 0;margin: 20px 0;float: left;left: 40px;}
+.flex_mini .flexslider .slides{overflow: hidden;padding-left: 30px;}
+.flex_mini .flex-direction-nav li a {width:12px; height:260px; display: block; background: url(images/mini_arr.png) no-repeat #FFF; position: absolute; top: 0; cursor: pointer; text-indent: -9999px;}
+.flex_mini .flex-direction-nav li .next {background-position: -12px 100px; right:0;}
+.flex_mini .flex-direction-nav li .prev {background-position: 0 100px;left: 0;}
+.flex_mini .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+/* Control Nav */
+.flex_mini .flex-control-nav {width: 100%; position: absolute; bottom:10px; *bottom:0px;text-align: center;display: none;}
+
+
+

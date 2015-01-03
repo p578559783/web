@@ -1,0 +1,124 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="block">
+<div class="blank"></div><div class="blank"></div> 
+
+<div style="text-align:center">    <a href="index.php"><img src="../images/bottom_home.gif" style="margin-right:15px;"></a> <a href="#top"><img src="../images/bottom_top2.gif"></a>       </div> 
+
+
+<!--底部导航 start-->
+
+
+
+
+<table width="960" border="0" cellpadding="0" cellspacing="0" id="bottom3">
+  <tbody>
+
+  <tr>
+    <td height="20" colspan="4"></td>
+  </tr>
+  <tr>
+    <td height="1" colspan="4" bgcolor="#e2e2e2"></td>
+  </tr>
+  <tr>
+    <td width="269" height="111"><img src="../themes/shishangqiyi/img/bottom_logo.gif" width="303" height="78" style="margin-bottom:10px;"></td>
+    <td width="520" align="center"><img src="../themes/shishangqiyi/img/bottom_time.gif" width="458" height="60"></td>
+    
+    <td width="170" align="center">
+      <table width="148" border="0" cellspacing="0" cellpadding="0" style="background-image:url('../themes/shishangqiyi/img/goods_bg.gif');
+background-repeat:no-repeat;">
+        <tbody><tr>
+          <td width="284" height="41"><table width="123" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td width="123" align="right" style="padding-right:20px;"><font color="#fc2e17"><strong>508</strong></font></td>
+            </tr>
+            <tr>
+              <td align="right" style="padding-right:12px;" ><font color="#fc2e17"><strong>6789</strong></font></td>
+            </tr>
+          </tbody></table></td>
+        </tr>
+    </tbody></table></td>
+  </tr>
+
+</tbody></table>
+
+
+
+<div class="helpTitBg">
+
+<!--{if $helps}-->
+<!-- {foreach from=$helps item=help_cat} -->
+<dl>
+  <dt><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}">{$help_cat.cat_name}</a></dt>
+  <!-- {foreach from=$help_cat.article item=item} -->
+  <dd><a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a></dd>
+  <!-- {/foreach} -->
+</dl>
+<!-- {/foreach} -->
+<!--{/if}-->
+</div>
+
+
+
+
+<div class="blank"></div>
+
+
+
+<div id="footer">
+<div class="blank"></div>
+<div class="blank"></div>
+
+<!--底部导航 end-->
+<!--版权 start-->
+<div style="background-color:#000000; height:28px; padding-top:5px; color:#FFFFFF">
+{$shop_address}  &nbsp;   <!-- ICP 证书{if $icp_number} -->
+  {$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank"><span style="color:#FFFFFF">{$icp_number}</span></a>
+  <!-- 结束ICP 证书{/if} -->   &nbsp{$copyright}
+</div>
+  {$shop_postcode}
+ <!-- 客服电话{if $service_phone} -->
+      Tel: {$service_phone}
+ <!-- 结束客服电话{/if} -->
+ <!-- 邮件{if $service_email} -->
+      E-mail: {$service_email}<br />
+ <!-- 结束邮件{/if} -->
+ <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+      <a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 结束淘宝旺旺 -->
+      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+      <!-- {if $im} -->
+      <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束Yahoo Messenger -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} --><br />
+    {if $stats_code}
+    <div align="left">{$stats_code}</div>
+    {/if}
+       <div class="blank"></div>
+<div class="blank"></div>
+
+
+       
+ </div>
+ 
+ 
+
+ 
+</div>
+</div>

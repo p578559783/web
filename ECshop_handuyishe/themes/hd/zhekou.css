@@ -1,0 +1,47 @@
+
+@charset "utf-8";
+
+
+.wrap{width:1200px;height:auto;min-height:430px;margin:0 auto;font:12px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;padding:5px 0;float:none}
+.discount_nav{width:100%;height:48px;outline:0;list-style:none;width:100%;color:#FFF}
+.discount_nav>li{display:block;float:left;width:20%;height:100%;*height:48px;font:bold 24px/1.5 "microsoft yahei";text-align:center;line-height:50px;cursor:pointer}
+.discount_nav a{width:100%;color:#FFF}
+.discount_nav a:hover{color:#FFF}
+.zhe1{background:#d95454}
+.zhe2{background:#f49a12}
+.zhe3{background:#f2f113}
+.zhe4{background:#abda6d}
+.zhe5{background:#17b6df}
+.hot_cate{background:#FFF;width:1200px;height:auto;overflow:hidden;color:#777;font:12px 'Microsoft YaHei';text-align:center;margin-bottom: 20px;}
+.hot_cate a:link,.hot_cate:visited{color:#777;padding:2px 5px;text-decoration:none}
+.hot_cate a:hover,.hot_cate a:active{background:#dedede;color:#d95454}
+.hot_cate a.selected{background:#dedede;color:#d95454}
+.hot_cate a.em{color:#d95454}
+.hot_cate h1{font:16px 'Microsoft YaHei',sans-serif;line-height:26px;padding:3px 10px;background:#d95454;color:#FFF;width:140px;text-indent:10px}
+.hot_cate h2{font:bold 16px 'Microsoft YaHei',sans-serif;line-height:26px;color:#d95454;float:none;padding-bottom:10px}
+.hot_cate ul{width:190px;height:240px;float:left;padding:10px 20px;padding-right:29px;border-right:1px solid #EEE;margin-top:10px;}
+.hot_cate li{float:left;width:100%;line-height:26px}
+.hot_cate li a.selected{background:#f5827f;color:#FFF;text-decoration:none}
+.cate_list{width:104%;height:auto;overflow:hidden;padding:10px 0}
+.cate_list li{float:left;overflow:hidden;margin:0;padding-bottom:10px;margin-bottom:15px;color:#666;overflow:hidden}
+.cate_list a{display:block;width:100%;color:#666;line-height:22px;text-decoration:none}
+.cate_list .name{text-align:left;height:20px;overflow:hidden;padding:5px 0;text-indent: 2px;}
+.cate_list .week_goods_npName{width:100%;font:16px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;line-height:26px;text-align:left;float:left;color:#a73836}
+.list_pic{height:268px;overflow:hidden}
+.list_pic img{width:100%}
+.discount_contain{width:100%;margin-top:10px;}
+.discount_contain h1{width:100%;font:28px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;color:#f9abab;border-bottom:2px solid #f9abab}
+.pinkPirce{color:#faa4a4;font}
+.cate_list li.m{width:280px;height:auto;margin-right:23px;position:relative;border:1px solid #EEE}
+.price{color:#C80A28;font:16px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;text-indent: 2px;}
+.price span{font:12px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;}
+.price del{color: #999;font:12px 'Microsoft YaHei',Tahoma,Helvetica,Sans-Serif;text-indent: 2px;}
+.tag2{background:url('images/tag1.png') no-repeat 0 0;width:58px;height:78px;position:absolute;right:5px;top:5px;font:16px/60px "microsoft yahei";text-indent:8px;color:#FFF}
+.tag2 em{font:26px/60px "microsoft yahei";letter-spacing:-1px}
+.mod_page{float:none;text-align:center;margin:30px 0;color:#888;font:12px/1.5 tahoma,"microsoft yahei","\5FAE\8F6F\96C5\9ED1"}
+.mod_page a,.mod_page strong{font-size:12px;font-weight:normal;display:inline-block;line-height:30px;height:30px;margin:0 6px;padding:0 10px;border:1px solid #DDD}
+.mod_page a:hover{text-decoration:none}
+.mod_page .current{color:#FFF;background-color:#c80a28;border:1px solid #c80a28}
+.mod_page .prev,.mod_page .next{vertical-align:top}
+
+

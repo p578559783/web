@@ -1,0 +1,43 @@
+﻿<?php
+
+if(!function_exists("get_comments")){
+function get_comments($num)
+{
+   $sql = 'select * from '.$GLOBALS['ecs']->table('comment').
+            ' WHERE status = 1 AND parent_id = 0 and comment_type=0 '.
+            ' ORDER BY add_time DESC';
+
+  if ($num > 0)
+  {
+   $sql .= ' LIMIT ' . $num;
+  }
+  //echo $sql;
+        
+  $res = $GLOBALS['db']->getAll($sql);
+  $comments = array();
+  foreach ($res AS $idx => $row)
+  {
+
+   $comments[$idx]['user_name']       = $row['user_name'];
+   $comments[$idx]['content']       = $row['content'];
+            $comments[$idx]['id_value']       = $row['id_value'];
+
+  }
+  return $comments;
+}
+}
+
+?>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--数据调用-最新评论开始 -->
+<?php
+        $this->assign('my_comments',get_comments(6)); // 6代表会条数据
+?>
+<div class="h5"><a href="message.php" target="_blank">我要留言&raquo;</a>热门评论</div>
+<ul>
+  <!--{foreach from=$my_comments item=comments name=comm_num}-->
+  <!-- {if $smarty.foreach.comm_num.iteration<4}-->
+  <li> <a target="_blank" href="message.php">{$comments.content|truncate:19:""}</a> </li>
+  <!-- {/if} -->
+  <!--{/foreach}-->
+</ul>

@@ -1,0 +1,80 @@
+/* CSS Document */
+/*
+* Basic Cascading Style Sheet
+* Intructions: none
+* Version: 1.0
+* Updated: 2013-10-08  
+* Author: Cyan.John.
+* Contact:
+* qq:331863539
+* Email:zzy85620987@163.com
+*/
+
+@charset "utf-8";
+
+
+.cate_menu div{float:none}
+.cate_menu{background:#f9f9f9;width:220px;height:auto;overflow:hidden;min-height:400px;color:#444}
+.cate_menu h1{width:100%;background:#DDD;font:bold 14px/24px 'Microsoft YaHei',sans-serif;padding:4px 0;text-indent:4px;margin-top:3px;cursor:pointer;overflow:hidden}
+.cate_menu h1 a:hover{text-decoration:none}
+.cate_menu h2{background:url(images/s.png) no-repeat 2px center;font:bold 14px/24px 'Microsoft YaHei',sans-serif;text-indent:9px;margin:5px 0 0}
+.cate_menu ul{height:auto;overflow:hidden;width:100%;text-align:justify}
+.cate_menu>ul{padding-left:4px;width:83%}
+.cate_menu li{float:left;font-size:12px;line-height:22px;height:22px;list-style:none;text-indent:4px;display:inline-block;margin-right:8px;white-space:nowrap}
+.cate_menu li a{padding-right:5px}
+.cate_menu a:hover{cursor:pointer;text-decoration:underline}
+.treeright{font-size:18px;font-weight:bolder;color:#FFF;float:right;padding-right:5px;line-height:22px;display:block;width:22px;text-align:center}
+.cate_menu li span{float:right;padding:0 2px}
+#list_con:hover a,#list_con a{background:#DDD;text-decoration:none;padding:4px}
+
+
+.list_main{ width:1200px; margin:0 auto; float:none;}
+.list_main_Left{ margin:0; padding:0; width: 220px;float: left;}
+.category_tree{ width:200px; background:#f9f9f9;font-family:'Microsoft YaHei'; margin-top:10px; }
+.category_top10{width: 220px; background:#f9f9f9;font-family:'Microsoft YaHei'; margin-top:10px; }
+.category_paihang_title{background: url(images/list_bg.png) #3B3837; width: 100%; height:29px; line-height:29px; color:#fff; font-size:14px; text-indent:5px;font-family:'Microsoft YaHei';}
+.category_tree .category_tree_title{ background:url(images/list_bg.png) no-repeat 0 0; width:200px; height:29px; line-height:29px; color:#fff; font-size:14px; text-indent:5px;}
+.category_tree h3{ width:200px; height:29px; line-height:29px; background:#ddd; color:#fff; font-weight:normal; margin-top:3px; cursor:pointer}
+.category_tree h3 span.treeleft{ text-indent:5px; }
+.category_tree h3 span.treeright{float:right; margin-right:10px; font-weight:bold; font-size:16px;}
+.category_tree ul.category_list{}
+.category_tree ul.category_list li{ width:90px; height:25px; margin:5px 0 0 6px; text-align:center; line-height:25px; color:#393939}
+.category_tree ul.category_list li a{ color:#393939}
+.category_tree ul.category_list li.list_con{ background:#ddd; color:#000}
+/**销售排行**/
+.category_paihang_title{ margin-top:0px;}
+ul.category_paihang li{ padding:5px 20px; margin-top:10px; display:block}
+ul.category_paihang li .paihang_pic{position: relative; width:160px; height:auto; border:1px solid #EEE; }
+ul.category_paihang li .paihang_pic .paihang_num{ background:url(images/list_bg.png) no-repeat 0 -53px; width:22px; height:22px; color:#fff; text-indent:2px; position:absolute;left: 0;top: 0;}
+ul.category_paihang li .paihang_pic .paihang_num_icon1{ background:url(images/list_bg.png) no-repeat 0 -111px; width:22px; height:22px; color:#fff; text-indent:2px; position:absolute}
+ul.category_paihang li .paihang_pic img{width: 180px;height: 180px;}
+ul.category_paihang li .paihang_nr{ height:79px; width:100%; }
+ul.category_paihang li .paihang_nr span.paihang_nrName{ height:40px; line-height:20px; overflow:hidden; color:#393939;width:100%;display:block;}
+ul.category_paihang li .paihang_nr span.paihang_nrmoney1{ color:#7b7b7b}
+ul.category_paihang li .paihang_nr span.paihang_nrmonery2{ color:#c80a28; margin-top:8px; font-weight:bold;width:100%;display: block;}
+/******************右边************************/
+.list_main_Right{ margin-left:15px; width: 955px;float:left;}
+.weizhi{ line-height:30px;}
+.paixu{ width:100%; height:34px; line-height:34px; background:#f9f9f9; margin-top:10px; float:left; font-family:'Microsoft YaHei'; color:#7b7b7b; text-indent:10px;}
+.paixu .paixu_left{ margin:5px 0 0 0;float:left;}
+.paixu .paixu_left img{ border:0; float:left}
+.paixu .paixu_page{ float:right; margin-right:10px;}
+.paixu .paixu_page a{ padding:3px 10px; background:#fff; border:#dddddd 1px solid; }
+.paixu .paixu_page a.page00{ background:#7b7b7b; color:#fff}
+/**list_product**/
+.gallery{ width:308px; padding: 5px;float:left;}
+.gallery .product { width:100%;}
+.gallery .product li {width:100%;}
+.pro_imgli {width: 280px;height:280px;line-height: 280px;display: table-cell; /*解决容器中没有文字的问题*/vertical-align: middle; /*解决容器中没有文字的问题*/margin:0 auto;text-align:center; overflow:hidden}
+.pro_imgli img {/*设置图片垂直居中*/vertical-align:middle;}
+.gallery .product li img{width: 280px;}
+
+.gallery .hd{ position:relative;  zoom:1; width:200px; margin:5px 0 0 30px;}
+.gallery .hd ul{ overflow:hidden; zoom:1; width:200px; height:50px;height: auto;padding-bottom:10px;}
+.gallery .hd li{ width:42px;cursor:pointer;  list-style:none; margin:0 0 0 10px;float: left;}
+.gallery .hd li img{  float:left;border:1px solid #EEE;  padding:1px; }
+.gallery .hd li.on img{ border:2px solid #c80a28; background:#fff;padding: 0; }
+.gallery .product_name{ width:280px;  height:22px; line-height:20px; color: #666; font-size:12px; overflow:hidden; }
+.gallery .product_money{ width:280px; float:left; margin-top:5px;font-family:'Microsoft YaHei';  }
+.gallery .product_money span.markmoney{ font-size:8px;float:left; color:#7b7b7b; font-size:12px;}
+.gallery .product_money span.thmoney{ font-size:8px; display: inline-block; margin-left:5px;color:#c80a28; font-size: 14px; margin-top: -4px; padding-left: 10px;}

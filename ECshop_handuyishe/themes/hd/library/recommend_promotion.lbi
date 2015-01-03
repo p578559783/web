@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+<div class="pro_box">
+<div class="tit">
+Sale Produce &nbsp;
+ 促销商品
+</div>
+<div class="blank"></div>
+<div class="blank"></div>
+         <!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+       <div class="goodsItem">
+           <a href="{$goods.url}"><img class="goodsimg"  src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}"  /></a><br />
+					 <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
+                      <p><img src="../images/watermark_promote_small.gif"></p>
+           <font class="f1"> {$goods.promote_price}</font>
+           
+           </div>
+      
+         <!--{/foreach}-->
+       
+</div>
+<div class="blank"></div>
+<!-- {/if} -->
